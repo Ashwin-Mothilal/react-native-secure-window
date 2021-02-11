@@ -13,9 +13,9 @@ npm install react-native-secure-window
 ```js
 import SecureWindow from "react-native-secure-window";
 
-// ...
+//Can be used in componentDidMount or useEffect
 
-const result = await SecureWindow.multiply(3, 7);
+SecureWindow.changeSecureWindow(true);
 ```
 
 ## Contributing
