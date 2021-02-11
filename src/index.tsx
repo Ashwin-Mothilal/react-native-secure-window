@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 
 type SecureWindowType = {
-  multiply(a: number, b: number): Promise<number>;
+  changeSecureWindow(canEnableSecureWindow: boolean): void;
 };
 
 const { SecureWindow } = NativeModules;
