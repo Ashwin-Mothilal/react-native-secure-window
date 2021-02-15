@@ -1,4 +1,5 @@
 #import "SecureWindow.h"
+#import <React/RCTLog.h>
 
 @implementation SecureWindow
 
