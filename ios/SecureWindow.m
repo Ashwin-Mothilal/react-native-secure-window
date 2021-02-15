@@ -2,18 +2,12 @@
 
 @implementation SecureWindow
 
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE(SecureWindow)
 
-// Example method
-// See // https://facebook.github.io/react-native/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(changeSecureWindow: (BOOL *) canChangeSecureWindow)
 {
-  NSNumber *result = @([a floatValue] * [b floatValue]);
-
-  resolve(result);
+    self.isSecureWindowActive = canChangeSecureWindow;
+    RCTLogInfo(@"Yet to implement full functionality %i", self.isSecureWindowActive);
 }
 
 @end
