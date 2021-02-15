@@ -2,4 +2,6 @@
 
 @interface SecureWindow : NSObject <RCTBridgeModule>
 
+    @property (nonatomic) BOOL *isSecureWindowActive;
+
 @end
