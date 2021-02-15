@@ -1,6 +1,6 @@
 {
   "name": "react-native-secure-window",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Enabling or disabling secure window on Android",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
