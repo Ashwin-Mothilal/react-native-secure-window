@@ -3,19 +3,22 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 import SecureWindow from 'react-native-secure-window';
 
 export default function App() {
-  const [isScreenWindowSecured, setScreenWindowSecured] = React.useState<
-    boolean | undefined
-  >();
+  const [
+    isScreenWindowSecured,
+    setScreenWindowSecured,
+  ] = React.useState<boolean>(false);
 
   React.useEffect(() => {
-    SecureWindow.changeSecureWindow(true);
-  }, []);
+    SecureWindow.changeSecureWindow(isScreenWindowSecured);
+  }, [isScreenWindowSecured]);
 
   return (
     <View style={styles.container}>
-      <Text>isScreenWindowsSecured - {isScreenWindowSecured}</Text>
+      <Text>
+        isScreenWindowsSecured - {isScreenWindowSecured ? 'Yes' : 'No'}
+      </Text>
       <Button
-        title={`Toggle Screen Window state ${isScreenWindowSecured}`}
+        title="Toggle Screen Window state"
         onPress={() => {
           setScreenWindowSecured(
             (prevIsScreenWindowSecured) => !prevIsScreenWindowSecured
