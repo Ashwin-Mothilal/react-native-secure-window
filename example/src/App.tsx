@@ -3,10 +3,8 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 import SecureWindow from 'react-native-secure-window';
 
 export default function App() {
-  const [
-    isScreenWindowSecured,
-    setScreenWindowSecured,
-  ] = React.useState<boolean>(false);
+  const [isScreenWindowSecured, setScreenWindowSecured] =
+    React.useState<boolean>(false);
 
   React.useEffect(() => {
     SecureWindow.changeSecureWindow(isScreenWindowSecured);
